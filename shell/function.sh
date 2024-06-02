@@ -27,6 +27,14 @@ rozaq() {
   fi
 }
 
+check_axeron() {
+  [[ -z $1 || $1 != "com.fhrz.axeron" ]] && echo "Hacked by XOneZy (Entong) (Maintenance)" && exit 0
+  if ! echo "$CORE" | grep -q "$this_core"; then
+    echo "Axeron Not Original"
+    exit 0
+  fi
+}
+
 cactus() {
   #Rem01Gaming
   if [ $# -eq 0 ]; then
